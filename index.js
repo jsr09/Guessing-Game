@@ -8,27 +8,21 @@ instructions.style.color = 'red';
 
 // Add functionality to Answer Box
 const inputValue = document.body.querySelector('#answerBox');
-
-    // Create input function
-function input(num) {
-    const guess = document.getElementById('secondContainer');
-    const userInput = document.getElementById('answerBox');
-
-    userInput = num
-    secondContainer.firstChild.nodeValue = num
-};
-
-
-
-// inputValue.addEventListener('input', input(){
-//     console.log(input("5"));
-// })
+const guesses = []
 
 // Add functionality to Go! Button
 const goButton = document.body.querySelector('#enterAnswer');
-goButton.addEventListener('click', input() {
+goButton.addEventListener('click', function() {
     console.log("This works!");
+    guesses.push(inputValue.value)
     
+
+    if(guesses[0]) document.body.querySelector('.guess1').innerHTML = guesses[0]
+    if(guesses[1]) document.body.querySelector('.guess2').innerHTML = guesses[1]
+    if(guesses[2]) document.body.querySelector('.guess3').innerHTML = guesses[2]
+    if(guesses[3]) document.body.querySelector('.guess4').innerHTML = guesses[3]
+    if(guesses[4]) document.body.querySelector('.guess5').innerHTML = guesses[4]
+    console.log(guesses);
 });
 
 // Add functionality to Try Again Button
