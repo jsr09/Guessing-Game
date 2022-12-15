@@ -1,4 +1,4 @@
-const number = (math.floor(math.random)* 100) 
+// const number = (math.floor(math.random)* 100); 
 
 // Initialize Game Title
 const gameTitle = document.body.querySelector('#gameTitle');
@@ -19,6 +19,9 @@ goButton.addEventListener('click', function() {
 
     guesses.push(inputValue.value)
     
+    if(inputValue !== 'number'){
+        return `${inputValue} is not a number.`
+    }
 
     if(guesses[0]) document.body.querySelector('.guess1').innerHTML = guesses[0]
     if(guesses[1]) document.body.querySelector('.guess2').innerHTML = guesses[1]
