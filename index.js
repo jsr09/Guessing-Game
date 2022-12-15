@@ -1,3 +1,5 @@
+const number = (math.floor(math.random)* 100) 
+
 // Initialize Game Title
 const gameTitle = document.body.querySelector('#gameTitle');
 gameTitle.style.color = 'blue';
@@ -14,6 +16,7 @@ const guesses = []
 const goButton = document.body.querySelector('#enterAnswer');
 goButton.addEventListener('click', function() {
     console.log("This works!");
+
     guesses.push(inputValue.value)
     
 
