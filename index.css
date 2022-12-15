@@ -1,0 +1,15 @@
+#secondContainer {
+    box-sizing: border-box;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 50px;
+    color: blue;
+}
+
+.guess {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 10px;
+}
+
