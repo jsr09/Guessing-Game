@@ -14,14 +14,24 @@ const guesses = []
 
 // Add functionality to Go! Button
 const goButton = document.body.querySelector('#enterAnswer');
+goButton.addEventListener('click', function(){
+    let customer = document.getElementById('answerBox').value;
+    let customerInput = document.getElementById('gameInstructions').value;
+    if(customerInput !== 'number'){
+        instructions.innerHTML = `${customer} is not a number!`
+    }else if(customerInput == 'number'){
+        guesses.push(inputValue.value)
+    }
+})
+
+
 goButton.addEventListener('click', function() {
     console.log("This works!");
 
     guesses.push(inputValue.value)
-    
-    if(inputValue !== 'number'){
-        return `${inputValue} is not a number.`
-    }
+    // if guesses.length > 5 , then we want the go button to be disabled and to output in gameInstructions "You lose! Try again."
+
+
 
     if(guesses[0]) document.body.querySelector('.guess1').innerHTML = guesses[0]
     if(guesses[1]) document.body.querySelector('.guess2').innerHTML = guesses[1]
